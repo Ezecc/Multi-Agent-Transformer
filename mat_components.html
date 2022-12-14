@@ -1,0 +1,948 @@
+<pre><font color="#12488B"><b>.</b></font>
+├── <font color="#12488B"><b>images</b></font>
+│   ├── <font color="#A347BA"><b>27m_vs_30m.gif</b></font>
+│   ├── <font color="#A347BA"><b>3s5z_vs_3s6z.gif</b></font>
+│   ├── <font color="#A347BA"><b>6h_vs_8z.gif</b></font>
+│   ├── <font color="#A347BA"><b>arch.gif</b></font>
+│   ├── <font color="#A347BA"><b>data.gif</b></font>
+│   ├── <font color="#A347BA"><b>envs.png</b></font>
+│   ├── <font color="#A347BA"><b>few_shot.jpeg</b></font>
+│   ├── <font color="#A347BA"><b>few_shot_smac.jpeg</b></font>
+│   ├── <font color="#A347BA"><b>football.jpeg</b></font>
+│   ├── <font color="#A347BA"><b>math.png</b></font>
+│   ├── <font color="#A347BA"><b>MMM2.gif</b></font>
+│   ├── <font color="#A347BA"><b>mujoco.png</b></font>
+│   ├── <font color="#A347BA"><b>paradigm.jpeg</b></font>
+│   └── <font color="#A347BA"><b>performance.jpeg</b></font>
+├── install_sc2.sh
+├── <font color="#12488B"><b>mat</b></font>
+│   ├── <font color="#12488B"><b>algorithms</b></font>
+│   │   ├── __init__.py
+│   │   ├── <font color="#12488B"><b>mat</b></font>
+│   │   │   ├── <font color="#12488B"><b>algorithm</b></font>
+│   │   │   │   ├── mat_decoder.py
+│   │   │   │   ├── mat_encoder.py
+│   │   │   │   ├── mat_gru.py
+│   │   │   │   ├── ma_transformer.py
+│   │   │   │   └── transformer_policy.py
+│   │   │   ├── __init__.py
+│   │   │   └── mat_trainer.py
+│   │   └── <font color="#12488B"><b>utils</b></font>
+│   │       ├── transformer_act.py
+│   │       └── util.py
+│   ├── config.py
+│   ├── <font color="#12488B"><b>envs</b></font>
+│   │   ├── <font color="#12488B"><b>dexteroushandenvs</b></font>
+│   │   │   ├── <font color="#12488B"><b>assets</b></font>
+│   │   │   │   ├── <font color="#12488B"><b>mjcf</b></font>
+│   │   │   │   │   ├── <font color="#12488B"><b>bottle_cap</b></font>
+│   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   ├── <font color="#12488B"><b>images</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>texture_0.jpg</b></font>
+│   │   │   │   │   │   │   └── <font color="#A347BA"><b>texture_1.jpg</b></font>
+│   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   ├── <font color="#12488B"><b>parts_render</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │   │   ├── 0.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │   │   ├── 1.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>5.png</b></font>
+│   │   │   │   │   │   │   ├── 5.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>6.png</b></font>
+│   │   │   │   │   │   │   ├── 6.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>7.png</b></font>
+│   │   │   │   │   │   │   └── 7.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>parts_render_after_merging</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │   │   ├── 0.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │   │   ├── 1.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>2.png</b></font>
+│   │   │   │   │   │   │   ├── 2.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>3.png</b></font>
+│   │   │   │   │   │   │   ├── 3.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>4.png</b></font>
+│   │   │   │   │   │   │   └── 4.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>point_sample</b></font>
+│   │   │   │   │   │   │   ├── label-10000.txt
+│   │   │   │   │   │   │   ├── ply-10000.ply
+│   │   │   │   │   │   │   ├── pts-10000.pts
+│   │   │   │   │   │   │   ├── pts-10000.txt
+│   │   │   │   │   │   │   ├── sample-points-all-label-10000.txt
+│   │   │   │   │   │   │   ├── sample-points-all-pts-label-10000.ply
+│   │   │   │   │   │   │   ├── sample-points-all-pts-nor-rgba-10000.ply
+│   │   │   │   │   │   │   └── sample-points-all-pts-nor-rgba-10000.txt
+│   │   │   │   │   │   ├── result_after_merging.json
+│   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │   │   ├── original-2.mtl
+│   │   │   │   │   │   │   ├── original-2.obj
+│   │   │   │   │   │   │   ├── original-3.mtl
+│   │   │   │   │   │   │   ├── original-3.obj
+│   │   │   │   │   │   │   ├── original-4.mtl
+│   │   │   │   │   │   │   ├── original-4.obj
+│   │   │   │   │   │   │   ├── original-5.mtl
+│   │   │   │   │   │   │   ├── original-5.obj
+│   │   │   │   │   │   │   ├── original-6.mtl
+│   │   │   │   │   │   │   ├── original-6.obj
+│   │   │   │   │   │   │   ├── original-7.mtl
+│   │   │   │   │   │   │   ├── original-7.obj
+│   │   │   │   │   │   │   ├── original-8.mtl
+│   │   │   │   │   │   │   └── original-8.obj
+│   │   │   │   │   │   ├── tree_hier_after_merging.html
+│   │   │   │   │   │   └── tree_hier.html
+│   │   │   │   │   ├── <font color="#12488B"><b>bucket</b></font>
+│   │   │   │   │   │   ├── <font color="#12488B"><b>100454</b></font>
+│   │   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   │   ├── <font color="#12488B"><b>images</b></font>
+│   │   │   │   │   │   │   │   └── <font color="#A347BA"><b>texture_0.jpg</b></font>
+│   │   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   │   ├── result_original.json
+│   │   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   │   └── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │   │       ├── original-1.mtl
+│   │   │   │   │   │   │       ├── original-1.obj
+│   │   │   │   │   │   │       ├── original-2.mtl
+│   │   │   │   │   │   │       └── original-2.obj
+│   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   ├── <font color="#12488B"><b>images</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>texture_0.jpg</b></font>
+│   │   │   │   │   │   │   └── <font color="#A347BA"><b>texture_1.jpg</b></font>
+│   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   ├── result_original.json
+│   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   └── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │       ├── original-10.mtl
+│   │   │   │   │   │       ├── original-10.obj
+│   │   │   │   │   │       ├── original-11.mtl
+│   │   │   │   │   │       ├── original-11.obj
+│   │   │   │   │   │       ├── original-13.mtl
+│   │   │   │   │   │       ├── original-13.obj
+│   │   │   │   │   │       ├── original-14.mtl
+│   │   │   │   │   │       ├── original-14.obj
+│   │   │   │   │   │       ├── original-1.mtl
+│   │   │   │   │   │       ├── original-1.obj
+│   │   │   │   │   │       ├── original-2.mtl
+│   │   │   │   │   │       ├── original-2.obj
+│   │   │   │   │   │       ├── original-3.mtl
+│   │   │   │   │   │       ├── original-3.obj
+│   │   │   │   │   │       ├── original-4.mtl
+│   │   │   │   │   │       ├── original-4.obj
+│   │   │   │   │   │       ├── original-5.mtl
+│   │   │   │   │   │       ├── original-5.obj
+│   │   │   │   │   │       ├── original-6.mtl
+│   │   │   │   │   │       ├── original-6.obj
+│   │   │   │   │   │       ├── original-7.mtl
+│   │   │   │   │   │       ├── original-7.obj
+│   │   │   │   │   │       ├── original-8.mtl
+│   │   │   │   │   │       └── original-8.obj
+│   │   │   │   │   ├── <font color="#12488B"><b>cup</b></font>
+│   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   ├── <font color="#12488B"><b>parts_render</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │   │   ├── 0.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │   │   ├── 1.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>2.png</b></font>
+│   │   │   │   │   │   │   ├── 2.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>3.png</b></font>
+│   │   │   │   │   │   │   └── 3.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>parts_render_after_merging</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │   │   ├── 0.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │   │   ├── 1.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>2.png</b></font>
+│   │   │   │   │   │   │   └── 2.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>point_sample</b></font>
+│   │   │   │   │   │   │   ├── label-10000.txt
+│   │   │   │   │   │   │   ├── ply-10000.ply
+│   │   │   │   │   │   │   ├── pts-10000.pts
+│   │   │   │   │   │   │   ├── pts-10000.txt
+│   │   │   │   │   │   │   ├── sample-points-all-label-10000.txt
+│   │   │   │   │   │   │   ├── sample-points-all-pts-label-10000.ply
+│   │   │   │   │   │   │   ├── sample-points-all-pts-nor-rgba-10000.ply
+│   │   │   │   │   │   │   └── sample-points-all-pts-nor-rgba-10000.txt
+│   │   │   │   │   │   ├── result_after_merging.json
+│   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │   │   ├── new-0.mtl
+│   │   │   │   │   │   │   ├── new-0.obj
+│   │   │   │   │   │   │   ├── new-1.mtl
+│   │   │   │   │   │   │   ├── new-1.obj
+│   │   │   │   │   │   │   ├── original-1.mtl
+│   │   │   │   │   │   │   ├── original-1.obj
+│   │   │   │   │   │   │   ├── original-2.mtl
+│   │   │   │   │   │   │   ├── original-2.obj
+│   │   │   │   │   │   │   ├── original-4.mtl
+│   │   │   │   │   │   │   ├── original-4.obj
+│   │   │   │   │   │   │   ├── original-5.mtl
+│   │   │   │   │   │   │   ├── original-5.obj
+│   │   │   │   │   │   │   ├── original-6.mtl
+│   │   │   │   │   │   │   └── original-6.obj
+│   │   │   │   │   │   ├── tree_hier_after_merging.html
+│   │   │   │   │   │   └── tree_hier.html
+│   │   │   │   │   ├── <font color="#12488B"><b>door</b></font>
+│   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   ├── <font color="#12488B"><b>images</b></font>
+│   │   │   │   │   │   │   └── <font color="#A347BA"><b>texture_0.jpg</b></font>
+│   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   ├── <font color="#12488B"><b>parts_render</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │   │   ├── 0.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │   │   ├── 1.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>23.png</b></font>
+│   │   │   │   │   │   │   ├── 23.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>24.png</b></font>
+│   │   │   │   │   │   │   ├── 24.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>25.png</b></font>
+│   │   │   │   │   │   │   ├── 25.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>26.png</b></font>
+│   │   │   │   │   │   │   ├── 26.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>27.png</b></font>
+│   │   │   │   │   │   │   ├── 27.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>28.png</b></font>
+│   │   │   │   │   │   │   ├── 28.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>29.png</b></font>
+│   │   │   │   │   │   │   ├── 29.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>2.png</b></font>
+│   │   │   │   │   │   │   ├── 2.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>30.png</b></font>
+│   │   │   │   │   │   │   ├── 30.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>31.png</b></font>
+│   │   │   │   │   │   │   ├── 31.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>32.png</b></font>
+│   │   │   │   │   │   │   ├── 32.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>33.png</b></font>
+│   │   │   │   │   │   │   ├── 33.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>34.png</b></font>
+│   │   │   │   │   │   │   └── 34.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>parts_render_after_merging</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │   │   ├── 0.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>10.png</b></font>
+│   │   │   │   │   │   │   ├── 10.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>11.png</b></font>
+│   │   │   │   │   │   │   ├── 11.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>12.png</b></font>
+│   │   │   │   │   │   │   ├── 12.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │   │   ├── 1.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>2.png</b></font>
+│   │   │   │   │   │   │   ├── 2.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>3.png</b></font>
+│   │   │   │   │   │   │   ├── 3.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>4.png</b></font>
+│   │   │   │   │   │   │   ├── 4.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>5.png</b></font>
+│   │   │   │   │   │   │   ├── 5.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>6.png</b></font>
+│   │   │   │   │   │   │   ├── 6.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>7.png</b></font>
+│   │   │   │   │   │   │   ├── 7.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>8.png</b></font>
+│   │   │   │   │   │   │   ├── 8.txt
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>9.png</b></font>
+│   │   │   │   │   │   │   └── 9.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>point_sample</b></font>
+│   │   │   │   │   │   │   ├── label-10000.txt
+│   │   │   │   │   │   │   ├── ply-10000.ply
+│   │   │   │   │   │   │   ├── pts-10000.pts
+│   │   │   │   │   │   │   ├── pts-10000.txt
+│   │   │   │   │   │   │   ├── sample-points-all-label-10000.txt
+│   │   │   │   │   │   │   ├── sample-points-all-pts-label-10000.ply
+│   │   │   │   │   │   │   ├── sample-points-all-pts-nor-rgba-10000.ply
+│   │   │   │   │   │   │   └── sample-points-all-pts-nor-rgba-10000.txt
+│   │   │   │   │   │   ├── result_after_merging.json
+│   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   ├── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │   │   ├── original-10.mtl
+│   │   │   │   │   │   │   ├── original-10.obj
+│   │   │   │   │   │   │   ├── original-11.mtl
+│   │   │   │   │   │   │   ├── original-11.obj
+│   │   │   │   │   │   │   ├── original-12.mtl
+│   │   │   │   │   │   │   ├── original-12.obj
+│   │   │   │   │   │   │   ├── original-1.mtl
+│   │   │   │   │   │   │   ├── original-1.obj
+│   │   │   │   │   │   │   ├── original-2.mtl
+│   │   │   │   │   │   │   ├── original-2.obj
+│   │   │   │   │   │   │   ├── original-5.mtl
+│   │   │   │   │   │   │   ├── original-5.obj
+│   │   │   │   │   │   │   ├── original-6.mtl
+│   │   │   │   │   │   │   ├── original-6.obj
+│   │   │   │   │   │   │   ├── original-7.mtl
+│   │   │   │   │   │   │   └── original-7.obj
+│   │   │   │   │   │   ├── tree_hier_after_merging.html
+│   │   │   │   │   │   └── tree_hier.html
+│   │   │   │   │   ├── <font color="#12488B"><b>kettle</b></font>
+│   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   ├── result_original.json
+│   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   └── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │       ├── original-1.mtl
+│   │   │   │   │   │       ├── original-1.obj
+│   │   │   │   │   │       ├── original-2.mtl
+│   │   │   │   │   │       ├── original-2.obj
+│   │   │   │   │   │       ├── original-3.mtl
+│   │   │   │   │   │       ├── original-3.obj
+│   │   │   │   │   │       ├── original-4.mtl
+│   │   │   │   │   │       └── original-4.obj
+│   │   │   │   │   ├── <font color="#12488B"><b>open_ai_assets</b></font>
+│   │   │   │   │   │   ├── <font color="#12488B"><b>fetch</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>pick_and_place.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>push.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>reach.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>robot.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>shared.xml</b></font>
+│   │   │   │   │   │   │   └── <font color="#26A269"><b>slide.xml</b></font>
+│   │   │   │   │   │   ├── <font color="#12488B"><b>hand</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>egg.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>manipulate_block_touch_sensors.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>manipulate_block.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>manipulate_egg_touch_sensors.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>manipulate_egg.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>manipulate_pen_touch_sensors.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>manipulate_pen.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>pen.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>reach.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>robot1.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>robot_touch_sensors_92.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>robot.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>shadow_hand1.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>shadow_hand.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>shared1.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>shared_asset1.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>shared_asset.xml</b></font>
+│   │   │   │   │   │   │   ├── <font color="#26A269"><b>shared_touch_sensors_92.xml</b></font>
+│   │   │   │   │   │   │   └── <font color="#26A269"><b>shared.xml</b></font>
+│   │   │   │   │   │   ├── <font color="#26A269"><b>LICENSE.md</b></font>
+│   │   │   │   │   │   ├── <font color="#12488B"><b>stls</b></font>
+│   │   │   │   │   │   │   ├── <font color="#12488B"><b>fetch</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>base_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>bellows_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>elbow_flex_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>estop_link.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>forearm_roll_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>gripper_link.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>head_pan_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>head_tilt_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>laser_link.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>l_wheel_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>r_wheel_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>shoulder_lift_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>shoulder_pan_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>torso_fixed_link.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>torso_lift_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>upperarm_roll_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   ├── <font color="#26A269"><b>wrist_flex_link_collision.stl</b></font>
+│   │   │   │   │   │   │   │   └── <font color="#26A269"><b>wrist_roll_link_collision.stl</b></font>
+│   │   │   │   │   │   │   └── <font color="#12488B"><b>hand</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>F1.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>F2.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>F3.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>forearm_electric_cvx.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>forearm_electric.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>knuckle.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>lfmetacarpal.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>palm.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>TH1_z.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>TH2_z.stl</b></font>
+│   │   │   │   │   │   │       ├── <font color="#26A269"><b>TH3_z.stl</b></font>
+│   │   │   │   │   │   │       └── <font color="#26A269"><b>wrist.stl</b></font>
+│   │   │   │   │   │   └── <font color="#12488B"><b>textures</b></font>
+│   │   │   │   │   │       ├── <font color="#26A269"><b>block_hidden.png</b></font>
+│   │   │   │   │   │       └── <font color="#26A269"><b>block.png</b></font>
+│   │   │   │   │   ├── <font color="#12488B"><b>pen</b></font>
+│   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   ├── result_original.json
+│   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   └── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │       ├── original-10.mtl
+│   │   │   │   │   │       ├── original-10.obj
+│   │   │   │   │   │       ├── original-11.mtl
+│   │   │   │   │   │       ├── original-11.obj
+│   │   │   │   │   │       ├── original-12.mtl
+│   │   │   │   │   │       ├── original-12.obj
+│   │   │   │   │   │       ├── original-13.mtl
+│   │   │   │   │   │       ├── original-13.obj
+│   │   │   │   │   │       ├── original-14.mtl
+│   │   │   │   │   │       ├── original-14.obj
+│   │   │   │   │   │       ├── original-15.mtl
+│   │   │   │   │   │       ├── original-15.obj
+│   │   │   │   │   │       ├── original-16.mtl
+│   │   │   │   │   │       ├── original-16.obj
+│   │   │   │   │   │       ├── original-17.mtl
+│   │   │   │   │   │       ├── original-17.obj
+│   │   │   │   │   │       ├── original-18.mtl
+│   │   │   │   │   │       ├── original-18.obj
+│   │   │   │   │   │       ├── original-19.mtl
+│   │   │   │   │   │       ├── original-19.obj
+│   │   │   │   │   │       ├── original-1.mtl
+│   │   │   │   │   │       ├── original-1.obj
+│   │   │   │   │   │       ├── original-2.mtl
+│   │   │   │   │   │       ├── original-2.obj
+│   │   │   │   │   │       ├── original-3.mtl
+│   │   │   │   │   │       ├── original-3.obj
+│   │   │   │   │   │       ├── original-4.mtl
+│   │   │   │   │   │       ├── original-4.obj
+│   │   │   │   │   │       ├── original-5.mtl
+│   │   │   │   │   │       ├── original-5.obj
+│   │   │   │   │   │       ├── original-6.mtl
+│   │   │   │   │   │       ├── original-6.obj
+│   │   │   │   │   │       ├── original-7.mtl
+│   │   │   │   │   │       ├── original-7.obj
+│   │   │   │   │   │       ├── original-8.mtl
+│   │   │   │   │   │       ├── original-8.obj
+│   │   │   │   │   │       ├── original-9.mtl
+│   │   │   │   │   │       └── original-9.obj
+│   │   │   │   │   ├── <font color="#12488B"><b>pot</b></font>
+│   │   │   │   │   │   ├── bounding_box.json
+│   │   │   │   │   │   ├── <font color="#12488B"><b>images</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>texture_0.png</b></font>
+│   │   │   │   │   │   │   ├── <font color="#A347BA"><b>texture_1.jpg</b></font>
+│   │   │   │   │   │   │   └── <font color="#A347BA"><b>texture_2.jpg</b></font>
+│   │   │   │   │   │   ├── meta.json
+│   │   │   │   │   │   ├── mobility.urdf
+│   │   │   │   │   │   ├── mobility_v2.json
+│   │   │   │   │   │   ├── mobilityWithoutCover.urdf
+│   │   │   │   │   │   ├── pot.xml
+│   │   │   │   │   │   ├── result.json
+│   │   │   │   │   │   ├── result_original.json
+│   │   │   │   │   │   ├── semantics.txt
+│   │   │   │   │   │   └── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │       ├── original-10.mtl
+│   │   │   │   │   │       ├── original-10.obj
+│   │   │   │   │   │       ├── original-11.mtl
+│   │   │   │   │   │       ├── original-11.obj
+│   │   │   │   │   │       ├── original-13.mtl
+│   │   │   │   │   │       ├── original-13.obj
+│   │   │   │   │   │       ├── original-14.mtl
+│   │   │   │   │   │       ├── original-14.obj
+│   │   │   │   │   │       ├── original-15.mtl
+│   │   │   │   │   │       ├── original-15.obj
+│   │   │   │   │   │       ├── original-16.mtl
+│   │   │   │   │   │       ├── original-16.obj
+│   │   │   │   │   │       ├── original-17.mtl
+│   │   │   │   │   │       ├── original-17.obj
+│   │   │   │   │   │       ├── original-19.mtl
+│   │   │   │   │   │       ├── original-19.obj
+│   │   │   │   │   │       ├── original-1.mtl
+│   │   │   │   │   │       ├── original-1.obj
+│   │   │   │   │   │       ├── original-21.mtl
+│   │   │   │   │   │       ├── original-21.obj
+│   │   │   │   │   │       ├── original-22.mtl
+│   │   │   │   │   │       ├── original-22.obj
+│   │   │   │   │   │       ├── original-23.mtl
+│   │   │   │   │   │       ├── original-23.obj
+│   │   │   │   │   │       ├── original-25.mtl
+│   │   │   │   │   │       ├── original-25.obj
+│   │   │   │   │   │       ├── original-26.mtl
+│   │   │   │   │   │       ├── original-26.obj
+│   │   │   │   │   │       ├── original-27.mtl
+│   │   │   │   │   │       ├── original-27.obj
+│   │   │   │   │   │       ├── original-29.mtl
+│   │   │   │   │   │       ├── original-29.obj
+│   │   │   │   │   │       ├── original-30.mtl
+│   │   │   │   │   │       ├── original-30.obj
+│   │   │   │   │   │       ├── original-31.mtl
+│   │   │   │   │   │       ├── original-31.obj
+│   │   │   │   │   │       ├── original-5.mtl
+│   │   │   │   │   │       ├── original-5.obj
+│   │   │   │   │   │       ├── original-6.mtl
+│   │   │   │   │   │       ├── original-6.obj
+│   │   │   │   │   │       ├── original-7.mtl
+│   │   │   │   │   │       ├── original-7.obj
+│   │   │   │   │   │       ├── original-8.mtl
+│   │   │   │   │   │       └── original-8.obj
+│   │   │   │   │   ├── <font color="#12488B"><b>scissors</b></font>
+│   │   │   │   │   │   └── <font color="#12488B"><b>10495</b></font>
+│   │   │   │   │   │       ├── bounding_box.json
+│   │   │   │   │   │       ├── meta.json
+│   │   │   │   │   │       ├── mobility.urdf
+│   │   │   │   │   │       ├── mobility_v2.json
+│   │   │   │   │   │       ├── <font color="#12488B"><b>parts_render</b></font>
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │       │   ├── 0.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │       │   ├── 1.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>2.png</b></font>
+│   │   │   │   │   │       │   ├── 2.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>3.png</b></font>
+│   │   │   │   │   │       │   ├── 3.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>4.png</b></font>
+│   │   │   │   │   │       │   ├── 4.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>5.png</b></font>
+│   │   │   │   │   │       │   ├── 5.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>6.png</b></font>
+│   │   │   │   │   │       │   ├── 6.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>7.png</b></font>
+│   │   │   │   │   │       │   └── 7.txt
+│   │   │   │   │   │       ├── <font color="#12488B"><b>parts_render_after_merging</b></font>
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>0.png</b></font>
+│   │   │   │   │   │       │   ├── 0.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>1.png</b></font>
+│   │   │   │   │   │       │   ├── 1.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>2.png</b></font>
+│   │   │   │   │   │       │   ├── 2.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>3.png</b></font>
+│   │   │   │   │   │       │   ├── 3.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>4.png</b></font>
+│   │   │   │   │   │       │   ├── 4.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>5.png</b></font>
+│   │   │   │   │   │       │   ├── 5.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>6.png</b></font>
+│   │   │   │   │   │       │   ├── 6.txt
+│   │   │   │   │   │       │   ├── <font color="#A347BA"><b>7.png</b></font>
+│   │   │   │   │   │       │   └── 7.txt
+│   │   │   │   │   │       ├── <font color="#12488B"><b>point_sample</b></font>
+│   │   │   │   │   │       │   ├── label-10000.txt
+│   │   │   │   │   │       │   ├── ply-10000.ply
+│   │   │   │   │   │       │   ├── pts-10000.pts
+│   │   │   │   │   │       │   ├── pts-10000.txt
+│   │   │   │   │   │       │   ├── sample-points-all-label-10000.txt
+│   │   │   │   │   │       │   ├── sample-points-all-pts-label-10000.ply
+│   │   │   │   │   │       │   ├── sample-points-all-pts-nor-rgba-10000.ply
+│   │   │   │   │   │       │   └── sample-points-all-pts-nor-rgba-10000.txt
+│   │   │   │   │   │       ├── result_after_merging.json
+│   │   │   │   │   │       ├── result.json
+│   │   │   │   │   │       ├── semantics.txt
+│   │   │   │   │   │       ├── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │   │       │   ├── new-0.mtl
+│   │   │   │   │   │       │   ├── new-0.obj
+│   │   │   │   │   │       │   ├── new-1.mtl
+│   │   │   │   │   │       │   ├── new-1.obj
+│   │   │   │   │   │       │   ├── new-2.mtl
+│   │   │   │   │   │       │   ├── new-2.obj
+│   │   │   │   │   │       │   ├── new-3.mtl
+│   │   │   │   │   │       │   ├── new-3.obj
+│   │   │   │   │   │       │   ├── original-3.mtl
+│   │   │   │   │   │       │   ├── original-3.obj
+│   │   │   │   │   │       │   ├── original-6.mtl
+│   │   │   │   │   │       │   └── original-6.obj
+│   │   │   │   │   │       ├── tree_hier_after_merging.html
+│   │   │   │   │   │       └── tree_hier.html
+│   │   │   │   │   └── <font color="#12488B"><b>switch</b></font>
+│   │   │   │   │       ├── <font color="#12488B"><b>102872</b></font>
+│   │   │   │   │       │   ├── bounding_box.json
+│   │   │   │   │       │   ├── meta.json
+│   │   │   │   │       │   ├── mobility.urdf
+│   │   │   │   │       │   ├── mobility_v2.json
+│   │   │   │   │       │   ├── result.json
+│   │   │   │   │       │   ├── result_original.json
+│   │   │   │   │       │   ├── semantics.txt
+│   │   │   │   │       │   └── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │       │       ├── original-1.mtl
+│   │   │   │   │       │       ├── original-1.obj
+│   │   │   │   │       │       ├── original-2.mtl
+│   │   │   │   │       │       ├── original-2.obj
+│   │   │   │   │       │       ├── original-3.mtl
+│   │   │   │   │       │       ├── original-3.obj
+│   │   │   │   │       │       ├── original-4.mtl
+│   │   │   │   │       │       ├── original-4.obj
+│   │   │   │   │       │       ├── original-6.mtl
+│   │   │   │   │       │       ├── original-6.obj
+│   │   │   │   │       │       ├── original-7.mtl
+│   │   │   │   │       │       ├── original-7.obj
+│   │   │   │   │       │       ├── original-8.mtl
+│   │   │   │   │       │       ├── original-8.obj
+│   │   │   │   │       │       ├── original-9.mtl
+│   │   │   │   │       │       └── original-9.obj
+│   │   │   │   │       ├── bounding_box.json
+│   │   │   │   │       ├── meta.json
+│   │   │   │   │       ├── mobility.urdf
+│   │   │   │   │       ├── mobility_v2.json
+│   │   │   │   │       ├── result.json
+│   │   │   │   │       ├── result_original.json
+│   │   │   │   │       ├── semantics.txt
+│   │   │   │   │       └── <font color="#12488B"><b>textured_objs</b></font>
+│   │   │   │   │           ├── original-10.mtl
+│   │   │   │   │           ├── original-10.obj
+│   │   │   │   │           ├── original-11.mtl
+│   │   │   │   │           ├── original-11.obj
+│   │   │   │   │           ├── original-12.mtl
+│   │   │   │   │           ├── original-12.obj
+│   │   │   │   │           ├── original-13.mtl
+│   │   │   │   │           ├── original-13.obj
+│   │   │   │   │           ├── original-14.mtl
+│   │   │   │   │           ├── original-14.obj
+│   │   │   │   │           ├── original-1.mtl
+│   │   │   │   │           ├── original-1.obj
+│   │   │   │   │           ├── original-2.mtl
+│   │   │   │   │           ├── original-2.obj
+│   │   │   │   │           ├── original-3.mtl
+│   │   │   │   │           ├── original-3.obj
+│   │   │   │   │           ├── original-4.mtl
+│   │   │   │   │           ├── original-4.obj
+│   │   │   │   │           ├── original-5.mtl
+│   │   │   │   │           ├── original-5.obj
+│   │   │   │   │           ├── original-6.mtl
+│   │   │   │   │           ├── original-6.obj
+│   │   │   │   │           ├── original-7.mtl
+│   │   │   │   │           ├── original-7.obj
+│   │   │   │   │           ├── original-8.mtl
+│   │   │   │   │           ├── original-8.obj
+│   │   │   │   │           ├── original-9.mtl
+│   │   │   │   │           └── original-9.obj
+│   │   │   │   ├── <font color="#12488B"><b>textures</b></font>
+│   │   │   │   │   ├── <font color="#26A269"><b>background_texture_metal_rust.jpg</b></font>
+│   │   │   │   │   ├── <font color="#26A269"><b>metal_wall_iron_fence.jpg</b></font>
+│   │   │   │   │   ├── <font color="#26A269"><b>particle_board_paint_aged.jpg</b></font>
+│   │   │   │   │   ├── <font color="#26A269"><b>pebble_stone_texture_nature.jpg</b></font>
+│   │   │   │   │   ├── <font color="#26A269"><b>texture_background_wall_paint_2.jpg</b></font>
+│   │   │   │   │   ├── <font color="#26A269"><b>texture_background_wall_paint_3.jpg</b></font>
+│   │   │   │   │   ├── <font color="#26A269"><b>texture_stone_stone_texture_0.jpg</b></font>
+│   │   │   │   │   └── <font color="#26A269"><b>texture_wood_brown_1033760.jpg</b></font>
+│   │   │   │   └── <font color="#12488B"><b>urdf</b></font>
+│   │   │   │       ├── <font color="#26A269"><b>ball.urdf</b></font>
+│   │   │   │       ├── <font color="#26A269"><b>cartpole.urdf</b></font>
+│   │   │   │       ├── <font color="#26A269"><b>cube.urdf</b></font>
+│   │   │   │       ├── <font color="#26A269"><b>icosphere.tet</b></font>
+│   │   │   │       ├── <font color="#26A269"><b>icosphere.urdf</b></font>
+│   │   │   │       ├── <font color="#12488B"><b>objects</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>ball.urdf</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>cube_goal_multicolor.urdf</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>cube_multicolor1.urdf</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>cube_multicolor.urdf</b></font>
+│   │   │   │       │   └── <font color="#12488B"><b>meshes</b></font>
+│   │   │   │       │       ├── <font color="#26A269"><b>ball.obj</b></font>
+│   │   │   │       │       ├── <font color="#26A269"><b>ball.stl</b></font>
+│   │   │   │       │       ├── <font color="#26A269"><b>cube_multicolor.mtl</b></font>
+│   │   │   │       │       └── <font color="#26A269"><b>cube_multicolor.obj</b></font>
+│   │   │   │       ├── <font color="#12488B"><b>shadow_hand_description</b></font>
+│   │   │   │       │   ├── <font color="#12488B"><b>meshes</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>biotac_decimated.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>biotac_thumb_adapter.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>convert_dae2obj.py</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>distal_ellipsoid.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>distal_ellipsoid.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>F1.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>F1.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>F2.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>F2.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>F3.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>F3.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>forearm.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>forearm_muscle.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>forearm_muscle.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>forearm.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>knuckle.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>knuckle.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>lfmetacarpal.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>lfmetacarpal.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>palm.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>palm.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>TH1_z.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>TH1_z.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>TH2_z.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>TH2_z.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>TH3_z.dae</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>TH3_z.obj</b></font>
+│   │   │   │       │   │   ├── <font color="#26A269"><b>wrist.dae</b></font>
+│   │   │   │       │   │   └── <font color="#26A269"><b>wrist.obj</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>shadowhand_new.urdf</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>shadowhand.urdf</b></font>
+│   │   │   │       │   └── <font color="#26A269"><b>shadowhand_with_fingertips.urdf</b></font>
+│   │   │   │       ├── <font color="#26A269"><b>small_ball.urdf</b></font>
+│   │   │   │       ├── <font color="#26A269"><b>square_table.urdf</b></font>
+│   │   │   │       ├── <font color="#12488B"><b>tray</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>traybox.urdf</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray.jpg</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray_textured2.mtl</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray_textured2.obj</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray_textured2.urdf</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray_textured4.mtl</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray_textured4.obj</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray_textured.mtl</b></font>
+│   │   │   │       │   ├── <font color="#26A269"><b>tray_textured.obj</b></font>
+│   │   │   │       │   └── <font color="#26A269"><b>tray.urdf</b></font>
+│   │   │   │       └── <font color="#12488B"><b>ycb</b></font>
+│   │   │   │           ├── <font color="#12488B"><b>010_potted_meat_can</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>010_potted_meat_can.urdf</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>collision.obj</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>MI_010_potted_meat_can_MI_010_potted_meat_can_D.png</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>textured.mtl</b></font>
+│   │   │   │           │   └── <font color="#26A269"><b>textured.obj</b></font>
+│   │   │   │           ├── <font color="#12488B"><b>011_banana</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>011_banana.urdf</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>collision.obj</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>MI_011_banana_MI_011_banana_D.png</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>textured.mtl</b></font>
+│   │   │   │           │   └── <font color="#26A269"><b>textured.obj</b></font>
+│   │   │   │           ├── <font color="#12488B"><b>025_mug</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>025_mug.urdf</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>MI_025_mug_MI_025_mug_D.png</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>mug_collision.obj</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>mug_collision_tw.obj</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>mug_collision_vhacd.obj</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>mug_visual.obj</b></font>
+│   │   │   │           │   ├── <font color="#26A269"><b>textured.mtl</b></font>
+│   │   │   │           │   └── <font color="#26A269"><b>textured.obj</b></font>
+│   │   │   │           └── <font color="#12488B"><b>061_foam_brick</b></font>
+│   │   │   │               ├── <font color="#26A269"><b>061_foam_brick.urdf</b></font>
+│   │   │   │               ├── <font color="#26A269"><b>MI_061_foam_brick_MI_061_foam_brick_D.png</b></font>
+│   │   │   │               ├── <font color="#26A269"><b>textured.mtl</b></font>
+│   │   │   │               └── <font color="#26A269"><b>textured.obj</b></font>
+│   │   │   ├── <font color="#12488B"><b>cfg</b></font>
+│   │   │   │   ├── <font color="#12488B"><b>ddpg</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── franka_cabinet.yaml
+│   │   │   │   ├── <font color="#12488B"><b>happo</b></font>
+│   │   │   │   │   ├── config.yaml
+│   │   │   │   │   └── lift_config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>hatrpo</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── humanoid.yaml
+│   │   │   │   ├── <font color="#12488B"><b>ippo</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>maddpg</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>mamlppo</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>mappo</b></font>
+│   │   │   │   │   ├── config.yaml
+│   │   │   │   │   └── lift_config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>meta_env_cfg</b></font>
+│   │   │   │   │   ├── shadow_hand_meta_ml1.yaml
+│   │   │   │   │   ├── shadow_hand_meta_mt1.yaml
+│   │   │   │   │   ├── shadow_hand_meta_mt20.yaml
+│   │   │   │   │   ├── shadow_hand_meta_mt5_door.yaml
+│   │   │   │   │   ├── shadow_hand_meta_mt5.yaml
+│   │   │   │   │   └── shadow_hand_meta.yaml
+│   │   │   │   ├── <font color="#12488B"><b>mtppo</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>mtsac</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>mttrpo</b></font>
+│   │   │   │   │   └── config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>ppo</b></font>
+│   │   │   │   │   ├── block_config.yaml
+│   │   │   │   │   ├── config.yaml
+│   │   │   │   │   ├── humanoid_config.yaml
+│   │   │   │   │   └── lift_config.yaml
+│   │   │   │   ├── <font color="#12488B"><b>sac</b></font>
+│   │   │   │   │   ├── config.yaml
+│   │   │   │   │   └── humanoid_config.yaml
+│   │   │   │   ├── shadow_hand_block_stack.yaml
+│   │   │   │   ├── shadow_hand_bottle_cap.yaml
+│   │   │   │   ├── shadow_hand_catch_abreast.yaml
+│   │   │   │   ├── shadow_hand_catch_over2underarm.yaml
+│   │   │   │   ├── shadow_hand_catch_overarm.yaml
+│   │   │   │   ├── shadow_hand_catch_underarm.yaml
+│   │   │   │   ├── shadow_hand_door_close_inward.yaml
+│   │   │   │   ├── shadow_hand_door_close_outward.yaml
+│   │   │   │   ├── shadow_hand_door_open_inward.yaml
+│   │   │   │   ├── shadow_hand_door_open_outward.yaml
+│   │   │   │   ├── shadow_hand_grasp_and_place.yaml
+│   │   │   │   ├── shadow_hand_kettle.yaml
+│   │   │   │   ├── shadow_hand_lift_cup.yaml
+│   │   │   │   ├── shadow_hand_lift_overarm.yaml
+│   │   │   │   ├── shadow_hand_lift_underarm2.yaml
+│   │   │   │   ├── shadow_hand_lift_underarm.yaml
+│   │   │   │   ├── shadow_hand_lift.yaml
+│   │   │   │   ├── shadow_hand_over_overarm.yaml
+│   │   │   │   ├── shadow_hand_over.yaml
+│   │   │   │   ├── shadow_hand_pen.yaml
+│   │   │   │   ├── shadow_hand_push_block.yaml
+│   │   │   │   ├── shadow_hand_re_orientation.yaml
+│   │   │   │   ├── shadow_hand_scissors.yaml
+│   │   │   │   ├── shadow_hand_swing_cup.yaml
+│   │   │   │   ├── shadow_hand_switch.yaml
+│   │   │   │   ├── shadow_hand_test.yaml
+│   │   │   │   ├── shadow_hand_two_catch_underarm.yaml
+│   │   │   │   ├── shadow_hand.yaml
+│   │   │   │   ├── <font color="#12488B"><b>td3</b></font>
+│   │   │   │   │   ├── config.yaml
+│   │   │   │   │   └── humanoid_config.yaml
+│   │   │   │   └── <font color="#12488B"><b>trpo</b></font>
+│   │   │   │       └── config.yaml
+│   │   │   ├── <font color="#12488B"><b>scripts</b></font>
+│   │   │   │   └── <font color="#26A269"><b>run_experiments.sh</b></font>
+│   │   │   ├── <font color="#12488B"><b>tasks</b></font>
+│   │   │   │   ├── <font color="#12488B"><b>arm_base</b></font>
+│   │   │   │   │   ├── multiAgent.py
+│   │   │   │   │   ├── oneFranka.py
+│   │   │   │   │   └── vec_task.py
+│   │   │   │   ├── franka_cabinet.py
+│   │   │   │   ├── <font color="#12488B"><b>hand_base</b></font>
+│   │   │   │   │   ├── base_task.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── meta_vec_task.py
+│   │   │   │   │   ├── multi_task_vec_task.py
+│   │   │   │   │   ├── multi_vec_task.py
+│   │   │   │   │   └── vec_task.py
+│   │   │   │   ├── humanoid.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── shadow_hand_block_stack.py
+│   │   │   │   ├── shadow_hand_bottle_cap.py
+│   │   │   │   ├── shadow_hand_catch_abreast.py
+│   │   │   │   ├── shadow_hand_catch_over2underarm.py
+│   │   │   │   ├── shadow_hand_catch_overarm.py
+│   │   │   │   ├── shadow_hand_catch_underarm.py
+│   │   │   │   ├── shadow_hand_door_close_inward.py
+│   │   │   │   ├── shadow_hand_door_close_outward.py
+│   │   │   │   ├── shadow_hand_door_open_inward.py
+│   │   │   │   ├── shadow_hand_door_open_outward.py
+│   │   │   │   ├── shadow_hand_grasp_and_place.py
+│   │   │   │   ├── shadow_hand_kettle.py
+│   │   │   │   ├── shadow_hand_lift_cup.py
+│   │   │   │   ├── shadow_hand_lift_overarm.py
+│   │   │   │   ├── shadow_hand_lift.py
+│   │   │   │   ├── shadow_hand_lift_underarm2.py
+│   │   │   │   ├── shadow_hand_lift_underarm.py
+│   │   │   │   ├── <font color="#12488B"><b>shadow_hand_meta</b></font>
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── shadow_hand_meta_ml1.py
+│   │   │   │   │   ├── shadow_hand_meta_ml1_task_info.py
+│   │   │   │   │   ├── shadow_hand_meta_mt1.py
+│   │   │   │   │   ├── shadow_hand_meta_mt1_task_info.py
+│   │   │   │   │   ├── shadow_hand_meta_mt20.py
+│   │   │   │   │   ├── shadow_hand_meta_mt20_task_info.py
+│   │   │   │   │   ├── shadow_hand_meta_mt5_door.py
+│   │   │   │   │   ├── shadow_hand_meta_mt5.py
+│   │   │   │   │   ├── shadow_hand_meta_mt5_task_info.py
+│   │   │   │   │   ├── shadow_hand_meta.py
+│   │   │   │   │   └── shadow_hand_meta_task_info.py
+│   │   │   │   ├── shadow_hand_meta.py
+│   │   │   │   ├── shadow_hand_meta_task_info.py
+│   │   │   │   ├── shadow_hand_over_overarm.py
+│   │   │   │   ├── shadow_hand_over.py
+│   │   │   │   ├── shadow_hand_pen.py
+│   │   │   │   ├── shadow_hand_push_block.py
+│   │   │   │   ├── shadow_hand.py
+│   │   │   │   ├── shadow_hand_re_orientation.py
+│   │   │   │   ├── shadow_hand_scissors.py
+│   │   │   │   ├── shadow_hand_swing_cup.py
+│   │   │   │   ├── shadow_hand_switch.py
+│   │   │   │   ├── shadow_hand_test.py
+│   │   │   │   ├── shadow_hand_two_catch_abreast.py
+│   │   │   │   └── shadow_hand_two_catch_underarm.py
+│   │   │   ├── train.py
+│   │   │   └── <font color="#12488B"><b>utils</b></font>
+│   │   │       ├── config.py
+│   │   │       ├── contact_buffer.py
+│   │   │       ├── <font color="#12488B"><b>logger</b></font>
+│   │   │       │   ├── analysis.py
+│   │   │       │   ├── plotter.py
+│   │   │       │   └── tools.py
+│   │   │       ├── parse_task.py
+│   │   │       ├── process_marl.py
+│   │   │       ├── process_metarl.py
+│   │   │       ├── process_mtrl.py
+│   │   │       ├── process_sarl.py
+│   │   │       ├── torch_jit_utils.py
+│   │   │       └── util.py
+│   │   ├── env_wrappers.py
+│   │   ├── <font color="#12488B"><b>football</b></font>
+│   │   │   ├── <font color="#12488B"><b>encode</b></font>
+│   │   │   │   ├── obs_encode.py
+│   │   │   │   └── rew_encode.py
+│   │   │   ├── <font color="#26A269"><b>football_env.py</b></font>
+│   │   │   └── <font color="#26A269"><b>multiagentenv.py</b></font>
+│   │   ├── __init__.py
+│   │   ├── <font color="#12488B"><b>ma_mujoco</b></font>
+│   │   │   ├── __init__.py
+│   │   │   └── <font color="#12488B"><b>multiagent_mujoco</b></font>
+│   │   │       ├── <font color="#12488B"><b>assets</b></font>
+│   │   │       │   ├── coupled_half_cheetah.xml
+│   │   │       │   ├── __init__.py
+│   │   │       │   ├── manyagent_ant__stage1.xml
+│   │   │       │   ├── manyagent_ant.xml
+│   │   │       │   ├── manyagent_ant.xml.template
+│   │   │       │   ├── manyagent_swimmer__bckp2.xml
+│   │   │       │   ├── manyagent_swimmer_bckp.xml
+│   │   │       │   └── manyagent_swimmer.xml.template
+│   │   │       ├── coupled_half_cheetah.py
+│   │   │       ├── __init__.py
+│   │   │       ├── manyagent_ant.py
+│   │   │       ├── manyagent_swimmer.py
+│   │   │       ├── <font color="#26A269"><b>mujoco_multi.py</b></font>
+│   │   │       ├── <font color="#26A269"><b>multiagentenv.py</b></font>
+│   │   │       ├── obsk.py
+│   │   │       └── <font color="#26A269"><b>random_mujoco_multi.py</b></font>
+│   │   ├── <font color="#12488B"><b>mpe</b></font>
+│   │   │   ├── core.py
+│   │   │   ├── environment.py
+│   │   │   ├── __init__.py
+│   │   │   ├── MPE_env.py
+│   │   │   ├── multi_discrete.py
+│   │   │   ├── rendering.py
+│   │   │   ├── scenario.py
+│   │   │   └── <font color="#12488B"><b>scenarios</b></font>
+│   │   │       ├── __init__.py
+│   │   │       ├── simple_adversary.py
+│   │   │       ├── simple_attack.py
+│   │   │       ├── simple_crypto_display.py
+│   │   │       ├── simple_crypto.py
+│   │   │       ├── simple_push.py
+│   │   │       ├── simple_reference.py
+│   │   │       ├── simple_speaker_listener.py
+│   │   │       ├── simple_spread.py
+│   │   │       ├── simple_tag.py
+│   │   │       └── simple_world_comm.py
+│   │   └── <font color="#12488B"><b>starcraft2</b></font>
+│   │       ├── feature_translation.py
+│   │       ├── multiagentenv.py
+│   │       ├── Random_StarCraft2_Env_Multi.py
+│   │       ├── Random_StarCraft2_Env.py
+│   │       ├── smac_maps.py
+│   │       └── StarCraft2_Env.py
+│   ├── __init__.py
+│   ├── <font color="#12488B"><b>runner</b></font>
+│   │   └── <font color="#12488B"><b>shared</b></font>
+│   │       ├── base_runner.py
+│   │       ├── football_runner.py
+│   │       ├── hands_runner.py
+│   │       ├── mpe_runner.py
+│   │       ├── mujoco_runner.py
+│   │       ├── smac_multi_runner.py
+│   │       └── smac_runner.py
+│   ├── <font color="#12488B"><b>scripts</b></font>
+│   │   ├── __init__.py
+│   │   ├── <font color="#12488B"><b>train</b></font>
+│   │   │   ├── __init__.py
+│   │   │   ├── train_football.py
+│   │   │   ├── train_hands.py
+│   │   │   ├── train_mpe.py
+│   │   │   ├── train_mujoco.py
+│   │   │   ├── train_smac_multi.py
+│   │   │   └── train_smac.py
+│   │   ├── train_football.sh
+│   │   ├── <font color="#26A269"><b>train_hands.sh</b></font>
+│   │   ├── <font color="#26A269"><b>train_mpe.sh</b></font>
+│   │   ├── <font color="#26A269"><b>train_mujoco.sh</b></font>
+│   │   ├── train_smac_few_shot.sh
+│   │   ├── train_smac_multi.sh
+│   │   └── train_smac.sh
+│   └── <font color="#12488B"><b>utils</b></font>
+│       ├── __init__.py
+│       ├── shared_buffer.py
+│       ├── util.py
+│       └── valuenorm.py
+├── README.md
+└── requirments.txt
+</pre>
